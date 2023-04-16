@@ -2,6 +2,7 @@ package ru.netology.selenide;
 
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 
@@ -20,6 +21,7 @@ public class CardDeliveryTest {
 
     @Test
     public void shouldBeSuccessfullyCompleted() {
+        Configuration.holdBrowserOpen = true;
         open("http://localhost:9999/");
         $("[data-test-id='city'] input").setValue("Воронеж");
         String currentDate = generateDate(3, "dd.MM.yyyy");
