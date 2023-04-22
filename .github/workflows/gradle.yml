@@ -20,3 +20,5 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew test -Dselenide.headless=true
+      - name: Build with Gradle
+        run: ./gradlew test --info
